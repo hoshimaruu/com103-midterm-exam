@@ -5,6 +5,14 @@ roster = [
     [4, 'Kagura', 'Mage'],
     [5, 'Chou', 'Fighter'],
 ]
+
+roster = [
+    [1, 'Layla', 'Marksman'],
+    [2, 'Tigreal', 'tank'],
+    [3, 'Gusion', 'Assassin'],
+    [4, 'Kagura', 'Mage'],
+    [5, 'Chou', 'Fighter'],
+]
 ranks = ["epic", "legend", "mythic"]
 # let's take the user's info
 ign = input("Enter your in-game IGN: ")
@@ -21,7 +29,7 @@ while True:
 
 # print the current roster
 print("="*20)
-print(f"{f"MOBILE LEDENDS -- HERO ROSTER":^20}")
+print(f"{'MOBILE LEDENDS -- HERO ROSTER':^20}")
 print("="*20)
 for i in range(len(roster)):
     print(f"{roster[i][0]}. {roster[i][1]} - {roster[i][2]}")
@@ -94,13 +102,13 @@ for i in range(len(KDAList)):
 win_rate = ((total_wins / (total_wins + total_lost)) * 100) # final KDA from the summation_win
 
 print("="*70)
-print(f"{f"{ign} -- MATCH LOG({rank})":^70}")
+print(f"{ign} -- MATCH LOG({rank})".center(70))
 print("="*70)
 for i in range(len(KDAList)):
-    print(f"[{i}]: {KDAList[i][1]} {"|":>10} KDA: {KDAList[i][2]} {"|":>10} {KDAList[i][3]} {"|":>10} {KDAList[i][4]}")
+    print(f"[{i}]: {KDAList[i][1]} | KDA: {KDAList[i][2]} | {KDAList[i][3]} | {KDAList[i][4]}")
 print("-"*70)
 print(f"Matches Played: {len(KDAList)}")
-print(f"Wins: {total_wins} {"|":^5} Losses: {total_lost}")
+print(f"Wins: {total_wins} | Losses: {total_lost}")
 print(f"Win Rate: {win_rate}%")
 print(f"Best Match: [{best_match[0]}] {best_match[1]} (KDA: {best_match[2]})")
 print("="*70)
