@@ -87,7 +87,6 @@ for i in range(4):
 total_wins = 0
 total_lost = 0
 best_match = None
-summation_win = 0 # we will use this to calculate the win rate
 
 for i in range(len(KDAList)):
     best_match = KDAList[i]
